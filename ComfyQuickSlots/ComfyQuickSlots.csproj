@@ -123,6 +123,7 @@
     <Compile Include="Core\TombStoneManager.cs" />
     <Compile Include="Core\Utils\InventoryLogger.cs" />
     <Compile Include="Core\Utils\KeyCodeUtils.cs" />
+    <Compile Include="Patches\AzuAutoStoreCompatPatch.cs" />
     <Compile Include="Patches\FejdStartupPatch.cs" />
     <Compile Include="Patches\HotkeyBarPatch.cs" />
     <Compile Include="Patches\HudPatch.cs" />

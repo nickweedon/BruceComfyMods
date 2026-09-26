@@ -1,5 +1,9 @@
 ## Changelog
 
+### 1.9.1 (Landia local build)
+
+  * Added an AzuAutoStore compatibility patch. On Valheim 1.0, AzuAutoStore's favoriting border renderer threw ArgumentOutOfRangeException every frame, which aborted InventoryGui.Update and left the crafting panel showing placeholder description text. Its routine is replaced with a bounds-checked copy when AzuAutoStore is loaded.
+
 ### 1.9.0
 
   * Added support for GlobalKey `DeathKeepEquip`.
