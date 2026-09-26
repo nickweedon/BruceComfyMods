@@ -84,15 +84,6 @@ public static class QuickSlotsManager {
     EquipItem(humanoid, item);
   }
 
-  public static bool EquipArmorInArmorSlots(Player player) {
-    for (int i = 0; i < 5; i++) {
-      if (player.GetInventory().GetItemAt(i, 4) != null) {
-        EquipItem(player, player.GetInventory().GetItemAt(i, 4));
-      }
-    }
-    return true;
-  }
-
   public static void EquipItem(Humanoid humanoid, ItemDrop.ItemData item) {
     if (item.m_shared.m_itemType == ItemDrop.ItemData.ItemType.Helmet) {
       humanoid.m_helmetItem = item;

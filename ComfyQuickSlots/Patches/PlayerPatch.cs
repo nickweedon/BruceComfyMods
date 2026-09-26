@@ -17,7 +17,14 @@ static class PlayerPatch {
     if (__instance.m_knownTexts.ContainsKey(QuickSlotsManager.PlayerDataKey)) {
       ZPackage pkg = new(__instance.m_knownTexts[QuickSlotsManager.PlayerDataKey]);
       __instance.GetInventory().Load(pkg);
-      QuickSlotsManager.EquipArmorInArmorSlots(__instance);
+
+      for (int i = 0; i < 5; i++) {
+        ItemDrop.ItemData armorItem = __instance.GetInventory().GetItemAt(i, 4);
+        if (armorItem != null) {
+          __instance.EquipItem(armorItem);
+        }
+      }
+
       __instance.GetInventory().Changed();
     } else {
       QuickSlotsManager.FirstLoad = true;

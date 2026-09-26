@@ -64,8 +64,8 @@ static class InventoryGridPatch {
     return existingBkg as RectTransform;
   }
 
-  static void SetupBindingLabel(InventoryGrid.Element element, string text, bool enabled = true) {
-    Transform binding = element.m_go.transform.Find("binding");
+  static void SetupBindingLabel(InventoryElement element, string text, bool enabled = true) {
+    Transform binding = element.transform.Find("binding");
 
     if (binding && binding.TryGetComponent(out TMP_Text label)) {
       label.text = text;
